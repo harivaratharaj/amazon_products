@@ -25,7 +25,7 @@ public class ALert {
 	       a.findElement(By.xpath("//*[@id=\"txt_pass\"]")).sendKeys("admin");
 	       a.findElement(By.xpath("//*[@id=\"Button3\"]")).click();
 	       Thread.sleep(2000);
-	       a.quit();
+	       a.close();
 
 
 	}
