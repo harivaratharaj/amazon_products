@@ -1,5 +1,7 @@
 package maven_selenium_programs;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +22,7 @@ public class ALert {
 	       Alert q=a.switchTo().alert();
 	       System.out.println(q.getText());
 	       q.accept();
-	       Thread.sleep(2000);
+	       a.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 	       a.findElement(By.xpath("//*[@id=\"txt_unam\"]")).sendKeys("Sylix");
 	       a.findElement(By.xpath("//*[@id=\"txt_pass\"]")).sendKeys("admin");
 	       a.findElement(By.xpath("//*[@id=\"Button3\"]")).click();
